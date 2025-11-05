@@ -1,0 +1,122 @@
+/* Reset and base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header at top */
+.header {
+  background-color: #1e3a5f; /* professional dark blue */
+  padding: 15px 30px;
+  color: white;
+  font-weight: bold;
+  position: fixed; /* stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* align content to left */
+  gap: 20px; /* space between nav items */
+}
+
+/* Navigation links */
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-list li a:hover {
+  background-color: rgba(255,255,255,0.2); /* subtle hover effect */
+}
+
+/* Main content area fills remaining viewport */
+main {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 100vh;           /* full viewport height */
+  padding-top: 80px;       /* leave space for fixed header */
+  box-sizing: border-box;
+}
+
+/* Calculator container */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.diff-container {
+  width: 95vw;          /* almost full screen width */
+  max-width: 1800px;    /* optional upper limit */
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1e3a5f; /* same professional blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #162c4a; /* darker hover */
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .compare-button {
+    width: 100%;
+  }
+}
